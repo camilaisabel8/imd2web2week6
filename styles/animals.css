@@ -45,7 +45,10 @@
 /********************************
 			Custom Properties
 ********************************/
+:root{
+	--shady-brown:#261703e6;
 
+}
 
 
 /********************************
@@ -82,4 +85,142 @@ footer{
 /********************************
 	Special (added in class)
 ********************************/
+
+main {
+
+	width:960px;
+	margin: 0 auto;
+
+	background-image: url("../images/corkback.jpg");
+	
+	padding:25px 45px 45px;
+
+	box-sizing: border-box;
+
+	border: 25px solid var(--shady-brown);
+	border-top: 0;
+
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+
+	box-shadow: 5px 5px 10px 5px #000000ac,inset 3px 3px 7px 5px #0000004d;
+
+	display:grid;
+	grid-template-columns: 1fr;
+
+}
+/*************pictures/content**************/
+	p{
+		line-height: 1.6;
+	}
+
+	section{
+		width:350px;
+	
+	}
+	main section:nth-child(2n){
+		justify-self:end;
+	}
+
+/*************tape effect and pseudo elements**************/
+article{ 
+
+	background:white;
+	border: 1px solid #ac8c8c;
+	box-shadow: 2px 2px 4px rgb(50,50,50,0.5);
+
+}
+
+header article{
+
+	padding: 10px;
+	margin: 20px 0;
+}
+
+section article{
+	padding: 23px;
+	position: relative;
+
+}
+
+section article img{
+	max-width: 100%;
+}
+
+section article::before{
+	content: " ";
+	width: 160px;
+	height: 45px;
+	background-color:rgba(255, 255, 255, 0.214);
+	position: absolute;
+	top: -23px;
+	transform: rotate(-15deg);
+	left: calc(50% - 80px);
+}
+
+h1 span{
+	display: block;
+	
+}
+
+h1 span::first-letter{
+	font-family: "Moo Lah Lah", cursive;
+	font-size: 1.3em;
+}
+
+p::selection{
+	color: white;
+	background-color: #382203;
+}	
+
+nav{
+	font-size:2em;
+	width:960px;
+	margin: 0 auto;
+	background:var(--shady-brown);
+	 
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+
+	position:sticky;
+	top: 0;
+	z-index: 10;
+
+	height:55px;
+}
+
+nav > ul{
+
+	display:flex;
+	justify-content: flex-end;
+	padding-top:20px;
+}
+nav > ul > li{
+	padding:0 10px;
+	position:relative;
+}
+nav ul ul{
+	display:none;
+}
+nav ul li:hover ul{
+	display:block;
+	position:absolute;
+	background-color:var(--shady-brown);
+}
+nav a{ 
+	color:white;
+	text-decoration:none;
+}
+
+/*************attributr slector**************/
+
+a[href*="wiki"]{
+	
+	background-image:url(../images/wikipedia-icon.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:top left;
+	padding-left: 1.5rem;
+
+}
 
